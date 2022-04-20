@@ -7,7 +7,7 @@ public abstract class Pessoa {
 	protected String dataNascimento;
 	protected String altura;
 	protected String peso;
-	protected String registroProfissional;
+	
 	private TipoPessoa tipo;
 	
 	public TipoPessoa getTipo() {
@@ -46,16 +46,13 @@ public abstract class Pessoa {
 	public void setPeso(String peso) {
 		this.peso = peso;
 	}
-	public String getRegistroProfissional() {
-		return registroProfissional;
-	}
-	public void setRegistroProfissional(String registroProfissional) {
-		this.registroProfissional = registroProfissional;
-	}
+	
 	@Override
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", altura=" + altura
-				+ ", peso=" + peso + ", registroProfissional=" + registroProfissional + ", tipo=" + tipo + "]";
+				+ ", peso=" + peso + ", tipo=" + tipo + "]";
 	}
+	
+		
 	
 }

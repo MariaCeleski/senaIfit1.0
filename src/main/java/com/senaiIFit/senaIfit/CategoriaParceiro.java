@@ -1,5 +1,5 @@
 package com.senaiIFit.senaIfit;
 
-public enum CategoriaParceiros {
+public enum CategoriaParceiro {
 	ACADEMIADANCA, ACADEMIAMUSCULACAO, HIDROGINASTICA, ARENABEACHTENNIS, KARATEKIDS
 }

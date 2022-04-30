@@ -7,7 +7,17 @@ import java.util.Map;
 public class Cliente extends Pessoa {
 
 	private Map<String, Endereco> enderecoPorApelido;
+	private Instrutor instrutor;
 	
+		
+	public Instrutor getInstrutor() {
+		return instrutor;
+	}
+
+	public void setInstrutor(Instrutor instrutor) {
+		this.instrutor = instrutor;
+	}
+
 	public Cliente() {
 		super(TipoPessoa.CLIENTE);
 		this.enderecoPorApelido = new HashMap<String, Endereco>();
@@ -23,11 +33,9 @@ public class Cliente extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Cliente [enderecoPorApelido=" + enderecoPorApelido + "]";
+		return "Cliente [enderecoPorApelido=" + enderecoPorApelido + ", instrutor=" + instrutor + "]";
 	}
 
-	
-
-	
+	 	
 	
 }

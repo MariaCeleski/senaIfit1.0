@@ -8,7 +8,16 @@ public class Instrutor extends Pessoa {
 	private ModalidadeAtividade modalidadeAtividade;
 	protected String registroProfissional;
 	private Map<String, Endereco>EnderecoPorApelido;
+	private Cliente cliente;
 	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
 	public Instrutor() {
 		super(TipoPessoa.INSTRUTOR);
 		this.EnderecoPorApelido = new HashMap<String, Endereco>();
@@ -41,9 +50,10 @@ public class Instrutor extends Pessoa {
 	@Override
 	public String toString() {
 		return "Instrutor [modalidadeAtividade=" + modalidadeAtividade + ", registroProfissional="
-				+ registroProfissional + ", EnderecoPorApelido=" + EnderecoPorApelido + "]";
+				+ registroProfissional + ", EnderecoPorApelido=" + EnderecoPorApelido + ", cliente=" + cliente + "]";
 	}
-		
+
+	 
 	
 
 }

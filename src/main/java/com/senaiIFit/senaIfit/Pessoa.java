@@ -70,11 +70,7 @@ public abstract class Pessoa {
 	public TipoPessoa getTipo() {
 		return tipo;
 	}
-
-	public void setTipo(TipoPessoa tipo) {
-		this.tipo = tipo;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", altura=" + altura

@@ -3,13 +3,13 @@ package com.senaiIFit.senaIfit;
 import java.util.Date;
 import java.util.Map;
 
-public class Parceiros {
+public class Parceiro {
 	
 	private String nome;
 	private String cnpj;
 	private Date dataEntrada;
 	private Map<String, Endereco> enderecoPorApelido;
-	private CategoriaParceiros categoria;
+	private CategoriaParceiro categoria;
 	private ModalidadeAtividade atividade;
 	
 	
@@ -19,10 +19,10 @@ public class Parceiros {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public CategoriaParceiros getCategoria() {
+	public CategoriaParceiro getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(CategoriaParceiros categoria) {
+	public void setCategoria(CategoriaParceiro categoria) {
 		this.categoria = categoria;
 	}
 	public ModalidadeAtividade getAtividade() {
@@ -49,11 +49,12 @@ public class Parceiros {
 	public void setEnderecoPorApelido(Map<String, Endereco> enderecoPorApelido) {
 		this.enderecoPorApelido = enderecoPorApelido;
 	}
-	
 	@Override
 	public String toString() {
-		return "Parceiros [nome=" + nome + ", cnpj=" + cnpj + ", dataEntrada=" + dataEntrada + ", enderecoPorApelido="
+		return "Parceiro [nome=" + nome + ", cnpj=" + cnpj + ", dataEntrada=" + dataEntrada + ", enderecoPorApelido="
 				+ enderecoPorApelido + ", categoria=" + categoria + ", atividade=" + atividade + "]";
 	}
+	
+	
 	
 }

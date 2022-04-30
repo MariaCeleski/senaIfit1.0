@@ -1,7 +1,7 @@
 package com.senaiIFit.senaIfit;
 
 import java.util.HashMap;
-import java.util.List;
+//import java.util.List;
 import java.util.Map;
 
 public class Cliente extends Pessoa {

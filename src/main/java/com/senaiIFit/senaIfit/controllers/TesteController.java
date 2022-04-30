@@ -14,9 +14,5 @@ public class TesteController {
 		return "Oi!Eu sou a primeira!";
 	}
 	
-	/*@GetMapping(value="/test")
-	public String teste2(@pathVariable("")) {
-		return "Abbreviate!";*/
-
-}*/
+	
 }

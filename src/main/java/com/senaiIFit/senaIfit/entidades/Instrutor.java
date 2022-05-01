@@ -1,28 +1,25 @@
 package com.senaiIFit.senaIfit.entidades;
 
-import java.util.Map;
-import java.util.HashMap;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+
+@Entity
 public class Instrutor extends Pessoa {
 	
+	@Column
+	@Enumerated
 	private ModalidadeAtividade modalidadeAtividade;
+	@Column
 	protected String registroProfissional;
-	private Map<String, Endereco>EnderecoPorApelido;
-	private Cliente cliente;
-	
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
+		
+		
 	public Instrutor() {
 		super(TipoPessoa.INSTRUTOR);
-		this.EnderecoPorApelido = new HashMap<String, Endereco>();
+		
 	}
-
+	
 	public ModalidadeAtividade getModalidadeAtividade() {
 		return modalidadeAtividade;
 	}
@@ -39,18 +36,11 @@ public class Instrutor extends Pessoa {
 		this.registroProfissional = registroProfissional;
 	}
 
-	public Map<String, Endereco> getEnderecoPorApelido() {
-		return EnderecoPorApelido;
-	}
-
-	public void setEnderecoPorApelido(Map<String, Endereco> enderecoPorApelido) {
-		EnderecoPorApelido = enderecoPorApelido;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "Instrutor [modalidadeAtividade=" + modalidadeAtividade + ", registroProfissional="
-				+ registroProfissional + ", EnderecoPorApelido=" + EnderecoPorApelido + ", cliente=" + cliente + "]";
+				+ registroProfissional + ", EnderecoPorApelido=" + ", cliente="  + "]";
 	}
 
 	 

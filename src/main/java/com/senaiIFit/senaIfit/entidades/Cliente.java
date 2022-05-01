@@ -1,48 +1,40 @@
 package com.senaiIFit.senaIfit.entidades;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity()
 public class Cliente extends Pessoa {
-	
-	
-	@Column
-	
-	private Map<String, Endereco> enderecoPorApelido;
-	private Instrutor instrutor;
-	
-		
-	public Instrutor getInstrutor() {
-		return instrutor;
-	}
 
-	public void setInstrutor(Instrutor instrutor) {
-		this.instrutor = instrutor;
-	}
-	
-	
+	@Column
+	private String email;
+
+	@Column
+	private Endereco endereco;
+
 	public Cliente() {
 		super(TipoPessoa.CLIENTE);
-		this.enderecoPorApelido = new HashMap<String, Endereco>();
 	}
 
-	public Map<String, Endereco> getEnderecoPorApelido() {
-		return enderecoPorApelido;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEnderecoPorApelido(Map<String, Endereco> enderecoPorApelido) {
-		this.enderecoPorApelido = enderecoPorApelido;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	@Override
 	public String toString() {
-		return "Cliente [enderecoPorApelido=" + enderecoPorApelido + ", instrutor=" + instrutor + "]";
+		return "Cliente [email=" + email + ", endereco=" + endereco + "]";
 	}
 
-	 	
-	
 }

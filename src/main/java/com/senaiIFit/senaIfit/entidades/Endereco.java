@@ -9,27 +9,25 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Endereco {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	
+
 	@Column(name = "endereco")
 	private String endereco;
 	@Column
 	private String complemento;
 	@Column
 	private String cep;
-	@Column
-	private String apelido;
 	@OneToOne
 	private Cliente cliente;
-	
-	
+	@OneToOne
+	private Instrutor instrutor;
+
 	public Endereco() {
-	
-}
+
+	}
 
 	public String getEndereco() {
 		return endereco;
@@ -54,5 +52,22 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Instrutor getInstrutor() {
+		return instrutor;
+	}
+
+	public void setInstrutor(Instrutor instrutor) {
+		this.instrutor = instrutor;
+	}
+
 	
 }

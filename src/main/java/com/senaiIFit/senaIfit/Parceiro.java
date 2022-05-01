@@ -1,5 +1,6 @@
 package com.senaiIFit.senaIfit;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Map;
 
@@ -7,12 +8,14 @@ public class Parceiro {
 	
 	private String nome;
 	private String cnpj;
-	private Date dataEntrada;
+	private LocalDateTime dataHora;
 	private Map<String, Endereco> enderecoPorApelido;
 	private CategoriaParceiro categoria;
-	private ModalidadeAtividade atividade;
-	
-	
+		
+	public Parceiro() {
+		this.dataHora = LocalDateTime.now();
+	}	
+		
 	public String getCnpj() {
 		return cnpj;
 	}
@@ -25,36 +28,33 @@ public class Parceiro {
 	public void setCategoria(CategoriaParceiro categoria) {
 		this.categoria = categoria;
 	}
-	public ModalidadeAtividade getAtividade() {
-		return atividade;
-	}
-	public void setAtividade(ModalidadeAtividade atividade) {
-		this.atividade = atividade;
-	}
+	
 	public String getNome() {
 		return nome;
 	}
+	public LocalDateTime getDataHora() {
+		return dataHora;
+	}
+
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataEntrada() {
-		return dataEntrada;
-	}
-	public void setDataEntrada(Date dataEntrada) {
-		this.dataEntrada = dataEntrada;
-	}
+	
+		
 	public Map<String, Endereco> getEnderecoPorApelido() {
 		return enderecoPorApelido;
 	}
 	public void setEnderecoPorApelido(Map<String, Endereco> enderecoPorApelido) {
 		this.enderecoPorApelido = enderecoPorApelido;
 	}
+
 	@Override
 	public String toString() {
-		return "Parceiro [nome=" + nome + ", cnpj=" + cnpj + ", dataEntrada=" + dataEntrada + ", enderecoPorApelido="
-				+ enderecoPorApelido + ", categoria=" + categoria + ", atividade=" + atividade + "]";
+		return "Parceiro [nome=" + nome + ", cnpj=" + cnpj + ", dataHora=" + dataHora + ", enderecoPorApelido="
+				+ enderecoPorApelido + ", categoria=" + categoria + "]";
 	}
-	
+		
 	
 	
 }

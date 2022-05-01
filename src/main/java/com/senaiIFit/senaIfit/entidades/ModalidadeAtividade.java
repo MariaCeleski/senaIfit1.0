@@ -1,4 +1,4 @@
-package com.senaiIFit.senaIfit;
+package com.senaiIFit.senaIfit.entidades;
 
 public enum ModalidadeAtividade {
 	

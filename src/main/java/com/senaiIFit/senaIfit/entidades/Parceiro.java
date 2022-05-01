@@ -1,4 +1,4 @@
-package com.senaiIFit.senaIfit;
+package com.senaiIFit.senaIfit.entidades;
 
 import java.time.LocalDateTime;
 import java.util.Date;

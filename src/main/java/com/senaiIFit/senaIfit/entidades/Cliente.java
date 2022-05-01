@@ -1,11 +1,17 @@
 package com.senaiIFit.senaIfit.entidades;
 
 import java.util.HashMap;
-//import java.util.List;
 import java.util.Map;
 
-public class Cliente extends Pessoa {
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
+@Entity()
+public class Cliente extends Pessoa {
+	
+	
+	@Column
+	
 	private Map<String, Endereco> enderecoPorApelido;
 	private Instrutor instrutor;
 	
@@ -17,7 +23,8 @@ public class Cliente extends Pessoa {
 	public void setInstrutor(Instrutor instrutor) {
 		this.instrutor = instrutor;
 	}
-
+	
+	
 	public Cliente() {
 		super(TipoPessoa.CLIENTE);
 		this.enderecoPorApelido = new HashMap<String, Endereco>();

@@ -1,14 +1,33 @@
 package com.senaiIFit.senaIfit.entidades;
 
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public abstract class Pessoa {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	@Column
 	protected String nome;
+	@Column
 	protected String cpf;
-	protected String dataNascimento;
-	protected String altura;
-	protected String peso;
-	
+	@Column
+	protected LocalDate dataNascimento;
+	@Column
+	protected Double altura;
+	@Column
+	protected Double peso;
+	@Column
+	@Enumerated
 	private SexoPessoa genero;
+	@Column
+	@Enumerated
 	private TipoPessoa tipo;
 	
 	public Pessoa(TipoPessoa tipo) {
@@ -19,6 +38,7 @@ public abstract class Pessoa {
 		this.genero = genero;
 	}
 
+	
 	public String getNome() {
 		return nome;
 	}
@@ -35,27 +55,27 @@ public abstract class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public String getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public String getAltura() {
+	public Double getAltura() {
 		return altura;
 	}
 
-	public void setAltura(String altura) {
+	public void setAltura(Double altura) {
 		this.altura = altura;
 	}
 
-	public String getPeso() {
+	public Double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(String peso) {
+	public void setPeso(Double peso) {
 		this.peso = peso;
 	}
 
@@ -70,11 +90,17 @@ public abstract class Pessoa {
 	public TipoPessoa getTipo() {
 		return tipo;
 	}
-	
+
+	public void setTipo(TipoPessoa tipo) {
+		this.tipo = tipo;
+	}
+
 	@Override
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", altura=" + altura
 				+ ", peso=" + peso + ", genero=" + genero + ", tipo=" + tipo + "]";
 	}
+
+	
 		
 }

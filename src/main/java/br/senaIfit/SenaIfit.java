@@ -1,4 +1,4 @@
-
+package br.senaIfit;
 
 import org.springframework.boot.SpringApplication;
 

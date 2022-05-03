@@ -10,6 +10,7 @@ import com.senaiIFit.senaIfit.repositorios.ClienteRepository;
 
 @Service
 public class ClienteService {
+
 	@Autowired
 	private ClienteRepository clienteRepo;
 
@@ -19,6 +20,7 @@ public class ClienteService {
 
 	public Optional<Cliente> obtemCliente(long clienteId) {
 		return this.clienteRepo.findById(clienteId);
-	}
+		}
+	
 
 }

@@ -14,7 +14,8 @@ public class Cliente extends Pessoa {
 
 	public Cliente() {
 		super(TipoPessoa.CLIENTE);
-	}
+		
+			}
 
 	public String getEmail() {
 		return email;

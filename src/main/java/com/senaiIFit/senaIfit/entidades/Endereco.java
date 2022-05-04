@@ -24,6 +24,8 @@ public class Endereco {
 	private Cliente cliente;
 	@OneToOne
 	private Instrutor instrutor;
+	@OneToOne
+	private Parceiro parceiro;
 
 	public Endereco() {
 
@@ -67,6 +69,14 @@ public class Endereco {
 
 	public void setInstrutor(Instrutor instrutor) {
 		this.instrutor = instrutor;
+	}
+
+	public Parceiro getParceiro() {
+		return parceiro;
+	}
+
+	public void setParceiro(Parceiro parceiro) {
+		this.parceiro = parceiro;
 	}
 
 	

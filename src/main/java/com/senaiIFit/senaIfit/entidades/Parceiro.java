@@ -1,7 +1,5 @@
 package com.senaiIFit.senaIfit.entidades;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -18,17 +16,10 @@ public class Parceiro {
 	@Column
 	private String cnpj;
 	@Column
-	private LocalDate dataHora;
-	@Column
-	private Endereco endereco;
-	@Column
 	@Enumerated
 	private CategoriaParceiro categoria;
 		
-	public Parceiro() {
-		this.dataHora = LocalDate.now();
-	}
-
+	
 	public String getNome() {
 		return nome;
 	}
@@ -45,22 +36,7 @@ public class Parceiro {
 		this.cnpj = cnpj;
 	}
 
-	public LocalDate getDataHora() {
-		return dataHora;
-	}
-
-	public void setDataHora(LocalDate dataHora) {
-		this.dataHora = dataHora;
-	}
-
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
-
+		
 	public CategoriaParceiro getCategoria() {
 		return categoria;
 	}
@@ -71,7 +47,7 @@ public class Parceiro {
 
 	@Override
 	public String toString() {
-		return "Parceiro [nome=" + nome + ", cnpj=" + cnpj + ", dataHora=" + dataHora + ", endereco=" + endereco
+		return "Parceiro [nome=" + nome + ", cnpj=" + cnpj + ", dataHora="
 				+ ", categoria=" + categoria + "]";
 	}	
 		

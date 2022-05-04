@@ -25,8 +25,7 @@ public class Checkin {
 		this.horaEntrada = LocalTime.from(horaEntrada);
 					
 	}	
-		 		
-		
+				
 		
 	public double CalcularIdade() {
 		
@@ -54,10 +53,8 @@ public class Checkin {
 		Duration.between(ltNow, lt);
 		
 		return tempoUsuario;
-		
-		
+			
 	}
-	
 	
 
 	public Cliente getCliente() {

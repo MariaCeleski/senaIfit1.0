@@ -22,7 +22,7 @@ public class Checkin {
 	public Checkin() {
 		this.dataAtual = LocalDate.now();
 		this.horaSaida = LocalTime.now();
-		this.horaEntrada = LocalTime.from(horaEntrada);
+		this.horaEntrada = LocalTime.from(null);
 					
 	}	
 				

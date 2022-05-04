@@ -1,10 +1,7 @@
 package com.senaiIFit.senaIfit.entidades;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 
 
 public class Checkin {
@@ -18,43 +15,6 @@ public class Checkin {
 	private Instrutor instrutor;
 	private ModalidadeAtividade atividade;
 	
-	
-	public Checkin() {
-		this.dataAtual = LocalDate.now();
-		this.horaSaida = LocalTime.now();
-		this.horaEntrada = LocalTime.from(null);
-					
-	}	
-				
-		
-	public double CalcularIdade() {
-		
-		String data = "";
-	    DateTimeFormatter formt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	    LocalDate d = LocalDate.parse(data, formt);
-	    
-	    Double idadeUsuario = (double) 0;
-		LocalDate data1 = LocalDate.of(d.getYear(), d.getMonth(), d.getDayOfMonth());
-	    LocalDate data2 = LocalDate.now();
-	    
-	    Period.between(data1, data2);
-	    
-	    return idadeUsuario;		
-	   
-	}  
-	
-	
-	public double CalcularTempo( ) {
-				
-		Double tempoUsuario = (double) 0;
-		LocalTime ltNow = LocalTime.now();
-		LocalTime lt = LocalTime.of(0, 0);
-		
-		Duration.between(ltNow, lt);
-		
-		return tempoUsuario;
-			
-	}
 	
 
 	public Cliente getCliente() {

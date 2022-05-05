@@ -2,8 +2,10 @@ package com.senaiIFit.senaIfit.entidades;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity()
+@Table(name="Cliente")
 public class Cliente extends Pessoa {
 
 	@Column

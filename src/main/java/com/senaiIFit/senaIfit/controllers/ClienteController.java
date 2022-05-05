@@ -29,17 +29,11 @@ public class ClienteController {
 		}
 		return new ResponseEntity<>("Entidade foi criada com sucesso!", HttpStatus.CREATED);
 	}
-
+	
 	@PostMapping("/cliente/")
 	public ResponseEntity salvaCliente(@Valid @RequestBody Cliente cliente) {
 		this.clienteService.cadastraCliente(cliente);
 		return new ResponseEntity<>(cliente, HttpStatus.CREATED);
-	}
-
-	@GetMapping("/cliente/{id}")
-	public ResponseEntity<Cliente> obtemCliente(@PathVariable String id) {
-		Optional<Cliente> cliente = this.clienteService.obtemCliente(Long.parseLong(id));
-		return ResponseEntity.of(cliente);
 	}
 
 }

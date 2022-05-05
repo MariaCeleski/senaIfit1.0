@@ -1,7 +1,12 @@
-package com.senaiIFit.senaIfit.entidades;
+package com.senaiIFit.senaIfit.checkinPrinc;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+import com.senaiIFit.senaIfit.entidades.Cliente;
+import com.senaiIFit.senaIfit.entidades.Instrutor;
+import com.senaiIFit.senaIfit.entidades.ModalidadeAtividade;
+import com.senaiIFit.senaIfit.entidades.Parceiro;
 
 
 public class Checkin {

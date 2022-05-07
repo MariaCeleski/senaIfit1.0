@@ -20,7 +20,7 @@ public class Checkin {
 	private ModalidadeAtividade atividade;
 	
 	
-	Checkin() {
+	public Checkin() {
 		this.data = LocalDate.now();
 		this.tempo = LocalTime.now();
 		this.atividade =  ModalidadeAtividade.BEATCHTENNIS;
@@ -49,8 +49,8 @@ public class Checkin {
 	public Parceiro getParceiro() {
 		return parceiro;
 	}
-	public void setParceiro(Parceiro parceiro) {
-		this.parceiro = parceiro;
+	public void setParceiro(Parceiro string) {
+		this.parceiro = string;
 	}
 	public LocalTime getTempo() {
 		return tempo;
@@ -70,6 +70,15 @@ public class Checkin {
 	public void setAtividade(ModalidadeAtividade atividade) {
 		this.atividade = atividade;
 	}
+
+}
+
+	
+		
 	
 
-		}
+
+
+		
+
+		

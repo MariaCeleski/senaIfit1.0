@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.senaiIFit.senaIfit.entidades.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long>{
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 	public Optional<Cliente> findById(Long id);
-	public Optional<Cliente> findByEmailAndCpf(String param1, 
+	public Optional<Cliente> findByIdEmailAndCpf(String param1, 
 			String param2);
 }

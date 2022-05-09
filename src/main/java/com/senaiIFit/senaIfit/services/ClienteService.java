@@ -10,17 +10,25 @@ import com.senaiIFit.senaIfit.repositorios.ClienteRepository;
 
 @Service
 public class ClienteService {
-
+	
 	@Autowired
 	private ClienteRepository clienteRepo;
 
+	
 	public void cadastraCliente(Cliente cliente) {
+		cliente.setCpf(cliente.getCpf());
+		cliente.setNome(cliente.getNome());
+		cliente.setEmail(cliente.getEmail());
+		cliente.setEndereco(cliente.getEndereco());
+		cliente.setNascimento(cliente.getNascimento());
+		cliente.setPeso(cliente.getPeso());
+		cliente.setAltura(cliente.getAltura());	
+	
 		this.clienteRepo.save(cliente);
 	}
+	
 
 	public Optional<Cliente> obtemCliente(long clienteId) {
 		return this.clienteRepo.findById(clienteId);
-		}
-	
-
+	}
 }

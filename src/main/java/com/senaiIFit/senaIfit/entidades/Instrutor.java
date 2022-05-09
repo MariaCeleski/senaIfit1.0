@@ -7,43 +7,35 @@ import javax.persistence.Enumerated;
 
 @Entity
 public class Instrutor extends Pessoa {
-	
+
+	@Column
+	protected String nregistroprof;
 	@Column
 	@Enumerated
-	private ModalidadeAtividade modalidadeAtividade;
-	@Column
-	protected String registroProfissional;
-		
-		
+	private ModalidadeAtividade atividade;
+
 	public Instrutor() {
 		super(TipoPessoa.INSTRUTOR);
 		
 	}
+	public String getNregistroprof() {
+		return nregistroprof;
+	}
+
+	public void setNregistroprof(String nregistroprof) {
+		this.nregistroprof = nregistroprof;
+	}
 	
-	public ModalidadeAtividade getModalidadeAtividade() {
-		return modalidadeAtividade;
+	public ModalidadeAtividade getAtividade() {
+		return atividade;
 	}
-
-	public void setModalidadeAtividade(ModalidadeAtividade modalidadeAtividade) {
-		this.modalidadeAtividade = modalidadeAtividade;
+	public void setAtividade(ModalidadeAtividade atividade) {
+		this.atividade = atividade;
 	}
-
-	public String getRegistroProfissional() {
-		return registroProfissional;
-	}
-
-	public void setRegistroProfissional(String registroProfissional) {
-		this.registroProfissional = registroProfissional;
-	}
-
-	
 	@Override
 	public String toString() {
-		return "Instrutor [modalidadeAtividade=" + modalidadeAtividade + ", registroProfissional="
-				+ registroProfissional + ", EnderecoPorApelido=" + ", cliente="  + "]";
+		return "Instrutor [nregistroprof=" + nregistroprof + ", atividade=" + atividade + "]";
 	}
-
-	 
 	
-
+	
 }

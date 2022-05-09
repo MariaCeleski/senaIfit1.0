@@ -1,8 +1,5 @@
 package com.senaiIFit.senaIfit.checkinPrinc;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

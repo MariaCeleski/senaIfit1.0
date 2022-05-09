@@ -13,22 +13,21 @@ public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-
-	@Column(name = "endereco")
-	private String endereco;
+	@Column (name = "endereco")
+	public String endereco;
 	@Column
-	private String complemento;
+	public String complemento;
 	@Column
-	private String cep;
+	public String cep;
 	@OneToOne
-	private Cliente cliente;
+	public Cliente cliente;
 	@OneToOne
-	private Instrutor instrutor;
+	public Instrutor instrutor;
 	@OneToOne
-	private Parceiro parceiro;
-
-	public Endereco() {
-
+	public Parceiro parceiro;
+	
+	
+	public Endereco () {			
 	}
 
 	public String getEndereco() {
@@ -54,11 +53,9 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-
 	public Cliente getCliente() {
 		return cliente;
 	}
-
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
@@ -78,6 +75,5 @@ public class Endereco {
 	public void setParceiro(Parceiro parceiro) {
 		this.parceiro = parceiro;
 	}
-
 	
 }
